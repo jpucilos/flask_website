@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body  style = "font-family:Helvetica; font-color:white;text-align:center;" bgcolor="powderblue">
+   
+      <h1>What's on your mind, {{session['name']}}?</h1>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+      <p>
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "thought">Thought?</label><br>
+         <input type = "textarea" name = "thought" placeholder = "thought" /><br>
+	 <input type = "submit" value = "Submit" />
+      </form>
+      
+   </body>
+</html>
