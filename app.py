@@ -21,21 +21,22 @@ class entries(db.Model):
 		self.time = time
 
 '''
-@app.route('/')
+@app.route('/', endpoint='index')
 def index():
 	return render_template('index.html')
 
-
-
-'''
-@app.route('/contact')
+@app.route('/contact', endpoint='contact')
 def contact():
 	return render_template('contact.html')
 
-@app.route('/photos')
+@app.route('/photos', endpoint='photos')
 def photos():
 	return render_template('photos.html')
-'''
+
+@app.route('/podcasts', endpoint='podcasts')
+def podcasts():
+	return render_template('podcasts.html')
+
 
 
 

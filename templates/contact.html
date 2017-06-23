@@ -5,22 +5,22 @@
 
 	</head>
 
-   	<body>	
-			
+   	<body>
+
 		<ul>
-			<li><a href= "{{ url_for('about') }}">About</a></li>
-			<li><a href= "{{ url_for('photos') }}">Photos</a></li>
-			<li><a href= "{{ url_for('contact') }}">Contact</a></li>
-			<li><a href= "{{ url_for('podcasts') }}">Podcasts</a></li>
+			<li><a href = "{{url_for('index')}}">Home</a></li>
+			<li><a href = "{{url_for('contact')}}">Contact</a></li>
+			<li><a href = "{{url_for('photos')}}">Photos</a></li>
+			<li><a href = "{{url_for('podcasts')}}">Podcasts</a></li>
 		</ul>
 		<div style="padding:20px;margin-top:30px;height:1500px;text-align:center;font-family:Helvetica,sans-serif;font-size:26px;">
-		
-	
+
+
 		</div>
 
 
 
-      
+
 
    </body>
 </html>
@@ -32,7 +32,7 @@
 		      {%- for message in get_flashed_messages() %}
 			 {{ message }}
 		      {%- endfor %}
-		
+
       		<p>
             {% for entry in entries %}
                 <tr>
@@ -41,15 +41,15 @@
 		<tr>
                 <td> On {{ entry.time }}, {{entry.name}} was thinking.....</td>
 		</tr>
-		
+
 		<tr style="font-size:26px;">
 		<td>{{ entry.thought }}</td>
 		</tr>
             {% endfor %}
          </tbody>
       </table>
-		
-		
+
+
 				<script>
 			function offHover()
 			{

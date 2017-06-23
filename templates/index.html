@@ -6,34 +6,27 @@
 
    	<body>
 		<ul>
-			<li>Home</a></li>
-			<li>Contact</a></li>
-			<li>Photos</a></li>
-			<li>Podcasts</a></li>
+			<li><a href = "{{url_for('index')}}">Home</a></li>
+			<li><a href = "{{url_for('contact')}}">Contact</a></li>
+			<li><a href = "{{url_for('photos')}}">Photos</a></li>
+			<li><a href = "{{url_for('podcasts')}}">Podcasts</a></li>
 		</ul>
-		<div style="padding:20px;margin-top:30px;height:1500px;text-align:center;font-family:Helvetica,sans-serif;font-size:26px;">
-
+		<div id = "mainBlock">
 			<img id = "faceImg" class = "img-circle" src = '../static/joe.jpg' width = '200' height = '200'>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
-			<p>Some text some text some text some text..</p>
+			<h1>Hello.</h1>
+			<h2> Congrats on stumbling upon my website. It's currently a WIP but feel free to click around and pretend things actually work.</h2>
+			<p>This website is hosted by pythonanywhere.com, using Flask microframework for Python based on Werkzeug, Jinja 2 and good intentions.</p>
+
+			<div id = "mainblock">
+			    <p>Check me out!</p>
+			    <a href = "https://github.com/jpucilos/">
+			        <img src = '../static/github.png' width = '200' height = '200'>
+			    </a>
+			    <a href = "https://www.linkedin.com/in/joseph-puciloski/">
+			        <img src = '../static/linkedin.png' width = '200' height = '200'>
+			    </a>
+			    <p>This website is hosted by pythonanywhere.com, using Flask microframework for Python based on Werkzeug, Jinja 2 and good intentions.</p>
+			</div>
 		</div>
 
    </body>
