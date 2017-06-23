@@ -1,9 +1,10 @@
 from flask import Flask, request, flash, url_for, redirect, render_template
 from flask import session
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
+'''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///thoughts.sqlite3'
 app.config['SECRET_KEY'] = "random string"
 db = SQLAlchemy(app)
@@ -17,11 +18,16 @@ class entries(db.Model):
 	def __init__(self, name, thought, time):
 		self.name = name
 		self.thought = thought
-		self.time = time	
-@app.route('/about')
-def index():	
+		self.time = time
+
+'''
+@app.route('/')
+def index():
 	return render_template('index.html')
 
+
+
+'''
 @app.route('/contact')
 def contact():
 	return render_template('contact.html')
@@ -29,6 +35,11 @@ def contact():
 @app.route('/photos')
 def photos():
 	return render_template('photos.html')
+'''
+
+
+
+
 '''
 @app.route('/your-thoughts')
 def index():
@@ -52,7 +63,7 @@ def login():
 '''
 
 
-
+'''
 @app.route('/new', methods = ['GET', 'POST'])
 def new():
 	if request.method == 'POST':
@@ -60,14 +71,14 @@ def new():
 			flash('Please enter all the fields', 'error')
 		else:
 			entry = entries(session['name'], request.form['thought'], datetime.now().strftime('%Y-%m-%d at %H:%M'))
- 
+
 			db.session.add(entry)
 			db.session.commit()
 			flash('Record was successfully added')
 			return redirect(url_for('show_all'))
 	return render_template('new.html')
-
+'''
 if __name__ == '__main__':
-	db.create_all()
-	app.run(debug = True)
+#	db.create_all()
+	app.run(debug = False)
 
