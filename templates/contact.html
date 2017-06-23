@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-	<img src = '/static/mukunter.png'>
+		<link rel="stylesheet" type = "text/css" href="../static/style.css">
+
 	</head>
 
-   <body style= "background-color:powderblue;text-align:center" >
-      <table style="font-family:Helvetica;" align="center">
-	<tr>
-	<td>
-	<a href = "{{ url_for('new') }}"> New thought!</a>
-	</td>
-	<td>
-	<a href = "{{ url_for('show_all') }}"> Everyone's Thoughts!</a>
-	</td>
-	<td>
-	<a href = "{{ url_for('login') }}"> Log Out</a>
-	</td>
-      <hr/>
-      {%- for message in get_flashed_messages() %}
-         {{ message }}
-      {%- endfor %}
+   	<body>	
+			
+		<ul>
+			<li><a href= "{{ url_for('about') }}">About</a></li>
+			<li><a href= "{{ url_for('photos') }}">Photos</a></li>
+			<li><a href= "{{ url_for('contact') }}">Contact</a></li>
+			<li><a href= "{{ url_for('podcasts') }}">Podcasts</a></li>
+		</ul>
+		<div style="padding:20px;margin-top:30px;height:1500px;text-align:center;font-family:Helvetica,sans-serif;font-size:26px;">
 		
-      <p>
-      <table style="font-family:Helvetica;" align="center">
-         <thead>
-            <tr>
-               <th style="font-size:26px">The Thought Bank:</th>
-            </tr>
-         </thead>
-         
-         <tbody>
+	
+		</div>
+
+
+
+      
+
+   </body>
+</html>
+
+
+<!--
+
+     		<hr/>
+		      {%- for message in get_flashed_messages() %}
+			 {{ message }}
+		      {%- endfor %}
+		
+      		<p>
             {% for entry in entries %}
                 <tr>
 		<td><hr/></td>
@@ -37,12 +41,24 @@
 		<tr>
                 <td> On {{ entry.time }}, {{entry.name}} was thinking.....</td>
 		</tr>
+		
 		<tr style="font-size:26px;">
 		<td>{{ entry.thought }}</td>
 		</tr>
             {% endfor %}
          </tbody>
       </table>
-      
-   </body>
-</html>
+		
+		
+				<script>
+			function offHover()
+			{
+				$("faceImg").attr('src', '../static/joe.jpg');
+			}
+
+			function onHover()
+			{
+				$("faceImg").attr('src', '../static/ct.png');
+			}
+		</script>
+//-->

@@ -1,19 +1,64 @@
-<!doctype html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body style="background-color:powderblue;text-align:center">
-	<p>
-	<img src = '/static/mukunter.png'>
-	<h1> "Store your thoughts here!</h1>	
-	<p>
-	<form action="/login" method="POST">
-		<label for="name">Login with your name, no password required! </label>
-	<p>
-		<input type="text" id="name" name="name" placeholder="Your Name Here">
-		<button type="submit">Submit</button>
-	</form>
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<link rel="stylesheet" type = "text/css" href="../static/style.css">
 
-</body>
+	</head>
+
+   	<body>	
+			
+		<ul>
+			<li><a href= "{{ url_for('about') }}">About</a></li>
+			<li><a href= "{{ url_for('photos') }}">Photos</a></li>
+			<li><a href= "{{ url_for('contact') }}">Contact</a></li>
+			<li><a href= "{{ url_for('podcasts') }}">Podcasts</a></li>
+		</ul>
+		<div style="padding:20px;margin-top:30px;height:1500px;text-align:center;font-family:Helvetica,sans-serif;font-size:26px;">
+		
+
+		</div>
+
+
+
+      
+
+   </body>
 </html>
+
+
+<!--
+
+     		<hr/>
+		      {%- for message in get_flashed_messages() %}
+			 {{ message }}
+		      {%- endfor %}
+		
+      		<p>
+            {% for entry in entries %}
+                <tr>
+		<td><hr/></td>
+		</tr>
+		<tr>
+                <td> On {{ entry.time }}, {{entry.name}} was thinking.....</td>
+		</tr>
+		
+		<tr style="font-size:26px;">
+		<td>{{ entry.thought }}</td>
+		</tr>
+            {% endfor %}
+         </tbody>
+      </table>
+		
+		
+				<script>
+			function offHover()
+			{
+				$("faceImg").attr('src', '../static/joe.jpg');
+			}
+
+			function onHover()
+			{
+				$("faceImg").attr('src', '../static/ct.png');
+			}
+		</script>
+//-->

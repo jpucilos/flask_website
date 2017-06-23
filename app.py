@@ -18,13 +18,9 @@ class entries(db.Model):
 		self.name = name
 		self.thought = thought
 		self.time = time	
-@app.route('/')
+@app.route('/about')
 def index():	
 	return render_template('index.html')
-
-@app.route('/about')
-def about():
-	return render_template('about.html')
 
 @app.route('/contact')
 def contact():
