@@ -25,9 +25,9 @@ class entries(db.Model):
 def index():
 	return render_template('index.html')
 
-@app.route('/contact', endpoint='contact')
+@app.route('/books', endpoint='books')
 def contact():
-	return render_template('contact.html')
+	return render_template('books.html')
 
 @app.route('/photos', endpoint='photos')
 def photos():

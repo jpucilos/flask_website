@@ -3,8 +3,9 @@ html, body {
 	height: 100%;
 	margin: 0;
 }
-
-
+a {
+    text-decoration:none;
+}
 h1 {
 	color: #333333;
 	size: 24px;
@@ -51,7 +52,7 @@ li a:hover {
 }
 
 li a:active {
-	background-color: #fff;
+	background-color: #f45925;
 	color: white;
 }
 
@@ -59,16 +60,66 @@ li a:active {
 
     padding:60px;
     margin-top:70px;
-    height:100%;
+    height:auto;
     text-align:center;
     font-family:Helvetica,sans-serif;
     font-size:26px;
     background-color: #f5f5f5;
     width:60%;
     margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 4px 1px #333333,
+    inset 0px 0px 0px 1px #7D730B;
+    -moz-box-shadow: 0px 0px 4px 1px #333333,
+    inset 0px 0px 0px 1px #7D730B;
+    box-shadow: 0px 0px 4px 1px #333333,
+    inset 0px 0px 0px 1px #7D730B;
 
 }
 
+#contentBlock {
+
+    padding:10px;
+    margin-top:20px;
+    height:auto;
+    text-align:center;
+    font-family:Helvetica,sans-serif;
+    font-size:26px;
+    background-color: #f5f5f5;
+    width:90%;
+    margin: 0 auto;
+
+}
+
+#customize-list{
+	float:left;
+	margin-left:20px;
+	list-style:none;
+}
+
+#gr_updates_widget{
+    float:left;
+    background-color:#f5f5f5;
+    width:100%;
+    height:auto;
+
+}
+
+#gr_updates_widget p{
+    padding:0px;
+    margin:0;
+    font-size:16px;
+    font-family: Helvetica, sans-serif;
+}
+
+#gr_footer img{
+width:100px;
+float:left;
+}
+
+
 .img-circle {
     border-radius: 50%;
+}
+.img-rounded {
+    border-radius: 12.5%;
 }
