@@ -55,6 +55,19 @@ li a:active {
 	background-color: #f45925;
 	color: white;
 }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: thin solid black;
+  padding: 3px;
+  text-align: left
+}
+tr.head th, tr.head td {
+  background-color: #EDEDED;
+  border-bottom: 4px double black;
+}
 
 #mainBlock {
 
