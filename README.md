@@ -6,6 +6,4 @@ http://jpucilos.pythonanywhere.com/
 
 
 //TO-DO:
-+Book Blub Recommendation database --> Google Sheets APi --> SQLAlchemy --> Flask --> Html
-+Add Photo Gallery (Home)
-+Develop home page further with public personal info
++Add Photos to Gallery (Home)
