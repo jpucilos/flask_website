@@ -1,7 +1,9 @@
 from flask import Flask, request, flash, url_for, redirect, render_template
 from flask import session
-#from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import dalton_method
+
 
 app = Flask(__name__)
 '''
@@ -25,6 +27,10 @@ class entries(db.Model):
 def index():
 	return render_template('index.html')
 
+@app.route('/projects', endpoint='projects')
+def projects():
+	return render_template('projects.html')
+
 @app.route('/books', endpoint='books')
 def contact():
 	return render_template('books.html')
@@ -33,10 +39,12 @@ def contact():
 def photos():
 	return render_template('photos.html')
 
-@app.route('/podcasts', endpoint='podcasts')
-def podcasts():
-	return render_template('podcasts.html')
-
+@app.route('/projects/dalton_method', endpoint='dalton method', methods = ['GET', 'POST'])
+def dalton_method():
+    if request.method == 'GET':
+	    return render_template('dalton_method.html')
+    else:
+        return render_template('dalton_method.html')
 
 
 

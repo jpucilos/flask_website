@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <html lang = "en">
 	<head>
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
@@ -7,9 +8,9 @@
    	<body>
 		<ul>
 			<li><a href = "{{url_for('index')}}">Home</a></li>
+			<li><a href = "{{url_for('projects')}}">Projects</a></li>
 			<li><a href = "{{url_for('books')}}">Books</a></li>
 			<li><a href = "{{url_for('photos')}}">Photos</a></li>
-			<!--<li><a href = "{{url_for('podcasts')}}">Podcasts</a></li> -->
 		</ul>
 		<div id = "mainBlock">
 			<img id = "faceImg" class = "img-circle" src = '../static/joe.jpg' width = '200' height = '200'>
