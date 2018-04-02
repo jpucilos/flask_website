@@ -6,4 +6,4 @@ http://jpucilos.pythonanywhere.com/
 
 
 //TO-DO:
-+Add Photos to Gallery (Home)
++Add contact page with email capabilities
