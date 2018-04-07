@@ -1,6 +1,5 @@
 from PIL import Image
 import numpy as np
-import matplotlib as mpl
 
 def array_to_img(arr):
 	#Convert a numpy array to a PIL image.
@@ -60,14 +59,14 @@ def daltonize(rgb, deficit='d'):
 	return array_to_img(dtpn)
 
 
-def dalton_run():
-    original_img = PIL.Image.open('test.jpg')
+def dalton_run(img):
+    original_img = Image.open(img)
     original_img_sim = sim_color_blindness(original_img, "p")
     new_img = daltonize(original_img, "p")
     new_img_sim = sim_color_blindness(new_img, "p")
-    original_img_sim.save('sim.jpg')
-    new_img.save('daltonized.jpg')
-    new_img_sim.save('daltonized_sim.jpg')
+    original_img_sim.save('/home/jpucilos/flask_website/static/sim2.jpg')
+    new_img.save('/home/jpucilos/flask_website/static/daltonized2.jpg')
+    new_img_sim.save('/home/jpucilos/flask_website/static/daltonized_sim2.jpg')
     return
 
 
