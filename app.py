@@ -57,16 +57,17 @@ def project462():
 	    return render_template('dalton_method.html')
     else:
         # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return render_template('dalton_method.html')
         file = request.files['file']
+        if 'file' not in request.files or file == '':
+            flash('No file inputted')
+            return render_template('dalton_method.html')
         # if user does not select file, browser also
         # submit a empty part without filename
-        if file and  allowed_file(file.filename):
+        if file and allowed_file(file.filename):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'test2.jpg'))
-        dalton_method.dalton_run('/home/jpucilos/flask_website/static/test2.jpg')
-        return render_template('dalton_method2.html')
+            dalton_method.dalton_run('/home/jpucilos/flask_website/static/test2.jpg')
+            return render_template('dalton_method2.html')
+        return render_template('dalton_method.html')
 
 @app.after_request
 def add_header(r):
