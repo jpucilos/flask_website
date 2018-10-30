@@ -1,8 +1,14 @@
 import os
+import sys
+#Avoid TCL error
+import matplotlib
+matplotlib.use('Agg')
+
 from flask import Flask, request, flash, url_for, redirect, render_template
-from flask import session
-from flask_sqlalchemy import SQLAlchemy
+#from flask import session
+#from flask_sqlalchemy import SQLAlchemy
 import dalton_method
+import signal_fading_sim
 
 UPLOAD_FOLDER = '/home/jpucilos/flask_website/static'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -68,6 +74,26 @@ def project462():
             dalton_method.dalton_run('/home/jpucilos/flask_website/static/test2.jpg')
             return render_template('dalton_method2.html')
         return render_template('dalton_method.html')
+
+
+@app.route('/projects/rayleigh_fading', endpoint='rayleigh fading', methods = ['GET', 'POST'])
+def project441():
+    if request.method == 'GET':
+	    return render_template('rayleigh_fading.html')
+    else:
+        # check if the post request has the file part
+        try:
+            f0 = int(request.form['f0'])
+            v = int(request.form['v'])
+            n = int(request.form['n'])
+            fs = int(request.form['fs'])
+            signal_fading_sim.rayleigh_fade(f0,v,n,fs)
+        except ValueError as verr:
+            print >> sys.stderr, str(verr)
+        except Exception as ex:
+            print >> sys.stderr, str(ex)
+
+        return render_template('rayleigh_fading.html')
 
 @app.after_request
 def add_header(r):

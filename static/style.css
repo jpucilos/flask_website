@@ -91,6 +91,7 @@ tr.head th, tr.head td {
 
 #contentBlock {
 
+    display: inline-block;
     padding:10px;
     margin-top:20px;
     height:auto;

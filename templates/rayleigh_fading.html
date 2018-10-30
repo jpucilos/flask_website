@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<link rel="stylesheet" type = "text/css" href="../static/style.css">
+
+	</head>
+
+   	<body>
+
+		<ul>
+			<li><a href = "{{url_for('index')}}">Home</a></li>
+            <li><a href = "{{url_for('projects')}}">Projects</a></li>
+			<li><a href = "{{url_for('books')}}">Books</a></li>
+			<li><a href = "{{url_for('photos')}}">Photos</a></li>
+		</ul>
+		<div id = "mainBlock">
+		    <h2>Rayleigh Fading Simulation</h2>
+
+    		<img src="../static/rayleigh_fading.PNG" alt = "test" width = auto height = auto>
+            <form method=post enctype=multipart/form-data>
+                Frequency in MHz (F0): <br>
+                <input type="number" name="f0" min="1" max="10000">
+                <br> Number of paths (n): <br>
+                <input type="number" name="n" min="1" max="1000">
+                 <br>Vehicle Speed in mph (v): <br>
+                <input type="number" name="v" min="1" max="1000">
+                 <br> Samples per wavelength (fs): <br>
+                <input type="number" name="fs" min="1" max="1000"> <br>
+                <input type=submit value=Submit>
+            </form>
+		</div>
+
+   </body>
+</html>
