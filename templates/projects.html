@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
+	    <title>Joe's Personal Website!</title>
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
 
 	</head>
 
    	<body>
 
-		<ul>
-			<li><a href = "{{url_for('index')}}">Home</a></li>
-			<li><a href = "{{url_for('projects')}}">Projects</a></li>
-			<li><a href = "{{url_for('books')}}">Books</a></li>
-			<li><a href = "{{url_for('photos')}}">Photos</a></li>
-		</ul>
+   	    <div class="topnav">
+            <a class="left text" href="{{url_for('index')}}">Home</a>
+            <a class="active left text" href = "{{url_for('projects')}}">Projects</a>
+            <a class="left text" href = "{{url_for('books')}}">Books</a>
+            <a class="left text" href = "{{url_for('photos')}}">Photos</a>
+            <a class = "right img" href = "https://github.com/jpucilos/">
+                <img class = "img-rounded" src = '../static/github.png' alt = 'GitHub' width = '44' height = '44' ></a>
+            <a class = "right img" href = "https://www.linkedin.com/in/joseph-puciloski/">
+                <img class = "img-rounded" src = '../static/linkedin.png' alt = 'LinkedIn' width = '44' height = '44'></a>
+            <a class = "right img" href = "https://www.goodreads.com/user/show/33110128-joseph-puciloski">
+                <img class = "img-rounded" src = '../static/goodreads.jpg' alt = 'Goodreads' width = '44' height = '44' ></a>
+        </div>
 
 		<div id = "mainBlock">
 		    <h1>Projects</h1>
