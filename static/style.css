@@ -4,37 +4,67 @@ html, body {
 	margin: 0;
 }
 
+/* -------------------------------
+    TEXT TAGS
+----------------------------------*/
 
 a {
     text-decoration:none;
 }
 
+a:link {
+color: #091f36;
+}
+
+a:visited {
+color: #091f36;
+}
+
 h1 {
     font-family: 'DM Serif Display', serif;
 	color: #091f36;
-	size: 32px;
+	font-size: 48px;
 }
 
 h2{
-
+    font-family: 'DM Serif Display', serif;
     color: #091f36;
-	size: 24px;
-
+	font-size: 24px;
 }
 
 p {
+    font-family: "Bookman Old Style";
 	color: #091f36;
-	size: 24px;
+	font-size: 18px;
+}
+
+/* -------------------------------
+    IMAGE TAGS
+----------------------------------*/
+
+.img-circle {
+    border-radius: 50%;
+}
+.img-rounded {
+    border-radius: 12.5%;
 }
 
 
-/* TOP BAR NAVIGATION STYLE */
+/* -------------------------------
+    TOP BAR NAVIGATION STYLE
+----------------------------------*/
 
 .topnav {
   background-color: #091f36;
   overflow: hidden;
   margin: 0px;
   padding: 0px;
+/* Get nav bar to scroll?
+
+  position: fixed;
+  width 100%;
+
+*/
 }
 
 
@@ -42,7 +72,8 @@ p {
 	display: block;
 	color: #fff;
 	text-decoration: none;
-	font: bold 16px Helvetica;
+	font-family: 'DM Serif Display', serif;
+	font-weight: 600;
 
 }
 
@@ -51,7 +82,8 @@ p {
 }
 
 .topnav a.img {
-    padding: 1px 1px;
+    padding: 5px 1px 1px 1px;
+    vertical-align: middle;
 }
 .topnav a.left {
     float: left;
@@ -61,129 +93,83 @@ p {
 }
 
 .topnav a:hover {
-	color: #DCC7AA;
+	color: #4f5f76;
 }
 
 .topnav a.active {
-	background-color: #F7882F;
-	color: white;
+	background-color: #DCC7AA;
+	color: #4f5f76;
 }
 
-/* END STYLE FOR TOP BAR */
 
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #091f36;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 
-li {
-	float: left;
-}
 
-li a {
-	display: block;
-	color: #fff;
-	padding: 16px 16px;
-	text-decoration: none;
-	font: bold 15px Helvetica;
-}
-
-li a:hover {
-	color: #DCC7AA;
-}
-
-li a:active {
-	background-color: #F7882F;
-	color: white;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  border: thin solid black;
-  padding: 3px;
-  text-align: left
-}
-
-tr.head th, tr.head td {
-  background-color: #EDEDED;
-  border-bottom: 4px double black;
-}
+/* -------------------------------
+    STYLE FOR MAIN BLOCK
+----------------------------------*/
 
 #mainBlock {
 
-    padding:60px;
-    margin-top:70px;
+    padding:30px;
+    margin-top:50px;
     height:auto;
-    text-align:center;
-    font-size: 20;
-    font-family: 'DM Serif Display', serif;
+    text-align: left;
     background-color: #f5f5f5;
     width:70%;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 0px 4px 1px #091f36,
+    -webkit-box-shadow: 0px 4px 2px 3px #091f36,
     inset 0px 0px 0px 1px #091f36;
-    -moz-box-shadow: 0px 0px 4px 1px #091f36,
+    -moz-box-shadow: 0px 4px 2px 3px #091f36,
     inset 0px 0px 0px 1px #091f36;
-    box-shadow: 0px 0px 4px 1px #091f36,
+    box-shadow: 0px 4px 2px 3px #091f36,
     inset 0px 0px 0px 1px #091f36;
 
 }
 
-#contentBlock {
-
-    display: inline-block;
-    padding:10px;
-    margin-top:20px;
-    height:100%;
-    text-align:center;
-    font-family: 'DM Serif Display', serif;
-    font-size:26px;
-    background-color: #f5f5f5;
-    width:90%;
-    margin: 0 auto;
-
-}
-
-#customize-list{
-	float:left;
-	margin-left:26px;
-	list-style:none;
-}
-
-#gr_updates_widget{
-    float:left;
-    background-color:#f5f5f5;
-    width:100%;
+.frontPageBlock {
+    padding:30px;
+    margin-top:50px;
     height:auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    width:70%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+    -moz-box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+    box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+
+
 
 }
 
-#gr_updates_widget p{
-    padding:0px;
-    margin:0;
-    font-size:16px;
-    font-family: Helvetica, sans-serif;
+/* -------------------------------
+    STYLE FOR PHOTO BLOCK
+----------------------------------*/
+
+.photoBlock {
+    padding : 20px;
+    margin: 25px auto;
+    width 90%;
+    height : auto;
+    text-align: center;
+    background-color: #DCC7AA;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+    -moz-box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+    box-shadow: 0px 4px 2px 3px #091f36,
+    inset 0px 0px 0px 1px #091f36;
+
 }
 
-#gr_footer img{
-width:100px;
-float:left;
+.photoBlock h2 {
+    margin: 5px;
 }
 
-
-.img-circle {
-    border-radius: 50%;
-}
-.img-rounded {
-    border-radius: 12.5%;
+.photoBlock img {
+    border-radius : 5%;
 }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <html lang = "en">
 	<head>
 	    <title>Joe's Personal Website!</title>
@@ -22,7 +23,11 @@
         </div>
 
 		<div id = "mainBlock">
-		    <h2>Image Correction for the Partially Color-Blind</h2>
+		    <h1>Image Correction for the Partially Color-Blind</h1>
+		    <p> This project was originally made for CPE 462, a class I took on Image Processing. The script implements a form of color-correction on images called the "Dalton Method".
+		     The purpose of this correction is to make certain images easier to see for the color-blind.</p>
+		    <p><a href = "https://github.com/jpucilos/image_proc_project" >Click this to see the code for this project</a></p>
+		    <hr>
 		    <p> Original Image </p>
 		    <img src="../static/test2.jpg" alt = "test" width = auto height = auto>
 		    <p> Image as seen by the colorblind (Protanopes) </p>

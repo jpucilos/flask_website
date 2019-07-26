@@ -3,14 +3,15 @@
 <html lang = "en">
 	<head>
 	    <title>Joe's Personal Website!</title>
-	    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 	</head>
 
    	<body>
+
    	    <div class="topnav">
-            <a class="active left text" href="{{url_for('index')}}">Home</a>
-            <a class="left text" href = "{{url_for('projects')}}">Projects</a>
+            <a class="left text" href="{{url_for('index')}}">Home</a>
+            <a class="active left text" href = "{{url_for('projects')}}">Projects</a>
             <a class="left text" href = "{{url_for('books')}}">Books</a>
             <a class="left text" href = "{{url_for('photos')}}">Photos</a>
             <a class = "right img" href = "https://github.com/jpucilos/">
@@ -21,17 +22,11 @@
                 <img class = "img-rounded" src = '../static/goodreads.jpg' alt = 'Goodreads' width = '44' height = '44' ></a>
         </div>
 
-		<div class = "frontPageBlock">
-            <img class = 'img-circle' src = 'https://avatars0.githubusercontent.com/u/25236506?s=460&v=4' width = '200' height = '200'>
-            <h1> Hello! </h1>
-			<p>My name is Joe. I created, and continue to update this website so that I can further my skills in front-end and back-end development.
-			This website is hosted by pythonanywhere.com and is entirely hand-coded using Python, HTML, CSS and (some) Javascript. </p>
-
-			<p>I am currently working as an electrical engineer, specializing in FPGA development.
-			Outside of work, my hobbies include reading, photography, skiing and cycling.</p>
+		<div id = "mainBlock">
+		    <h1>AES encryption calculator</h1>
 		    <hr>
-		    <p> Website last updated: July 2019</p>
+		    <h2>This is a work in progress.</h2>
 		</div>
+
    </body>
 </html>
-

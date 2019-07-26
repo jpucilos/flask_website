@@ -53,6 +53,10 @@ def photos():
 	return render_template('photos.html')
 
 
+@app.route('/projects/AES_encryption', endpoint='AES encryption')
+def AES_encryption():
+	return render_template('AES_encryption.html')
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

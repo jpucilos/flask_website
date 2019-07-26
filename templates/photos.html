@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <html lang = "en">
 	<head>
 	    <title>Joe's Personal Website!</title>
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
-
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 	</head>
 
    	<body>
@@ -25,36 +26,56 @@
 		    <h1> Photography </h1>
 		    <h2> Here are some photos that I've taken </h2>
 		    <hr>
-		    <h2>Sedona, Arizona</h2>
-		    <img src='../static/3_1.jpg' width= 100%>
 
-		    <h2>Sedona, Arizona</h2>
-		    <img src='../static/1_1.jpg'width= 100%>
+            <div class = "photoBlock">
+		        <img src='../static/3_1.jpg' width= 100%>
+		        <h2>Sedona, Arizona</h2>
+            </div>
 
-		    <h2>New Paltz, New York</h2>
-		    <img src='../static/2_1.jpg'width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/2_1.jpg'width= 100%>
+    		    <h2>New Paltz, New York</h2>
+            </div>
 
-		    <h2>Wantagh, New York</h2>
-		    <img src='../static/swan.jpg' width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/swan.jpg' width= 100%>
+    		    <h2>Wantagh, New York</h2>
+            </div>
 
-		    <h2>Jones Beach, New York</h2>
-		    <img src='../static/wheat.jpg' width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/wheat.jpg' width= 100%>
+    		    <h2>Jones Beach, New York</h2>
+            </div>
 
-		    <h2>London, England</h2>
-		    <img src='../static/westabbey.jpg' width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/westabbey.jpg' width= 100%>
+    		    <h2>London, England</h2>
+            </div>
 
-		    <h2>New York, New York</h2>
-		    <img src='../static/centralpark.jpg' width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/centralpark.jpg' width= 100%>
+    		    <h2>New York, New York</h2>
+            </div>
 
-		    <h2>New Plymouth, New Zealand</h2>
-		    <img src='../static/nz_8_web.jpg' width= 100%>
-		    <h2>Waitomo, New Zealand</h2>
-		    <img src='../static/nz_1_web.jpg' width= 100%>
-		    <h2>Hoboken, NJ</h2>
-		    <img src='../static/eclipse.jpg' width= 100%>
-		    <h2>Fire Island, NY</h2>
-		    <img src='../static/light_house.jpg' width= 100%>
+            <div class = "photoBlock">
+    		    <img src='../static/nz_8_web.jpg' width= 100%>
+    		    <h2>New Plymouth, New Zealand</h2>
+		    </div>
+
+		    <div class = "photoBlock">
+    		    <img src='../static/nz_1_web.jpg' width= 100%>
+    		    <h2>Waitomo, New Zealand</h2>
+		    </div>
+
+		    <div class = "photoBlock">
+    		    <img src='../static/eclipse.jpg' width= 100%>
+    		    <h2>Hoboken, NJ</h2>
+            </div>
+
+            <div class = "photoBlock">
+    		    <img src='../static/light_house.jpg' width= 100%>
+    		    <h2>Fire Island, NY</h2>
+		    </div>
 		</div>
-
    </body>
 </html>

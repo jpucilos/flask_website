@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <html lang = "en">
 	<head>
 	    <title>Joe's Personal Website!</title>
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
+		<link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 	</head>
 
    	<body>
@@ -21,15 +23,19 @@
         </div>
 
 		<div id = "mainBlock">
-		    <h2>Rayleigh Fading Simulation</h2>
-
-    		<img src="../static/rayleigh_fading.PNG" alt = "test" width = auto height = auto>
+		    <h1>Rayleigh Fading Simulation</h1>
+		    <p>This project was originally a homework assignment for CPE 441, a class I took on Wireless systems.
+		    Rayleigh fading is a statistical model for the effect of a propagation environment on a radio signal, such as that used by wireless devices.
+		    This script allows you to input values for parameters such as movement speed, sample rate, wavelength, and # of paths and receive an appropriate model of the resultant signal.</p>
+		    <p><a href = "https://github.com/jpucilos/classwork_archive/blob/master/EE441/signal_fading_sim.py" >Click this to see the code for this project</a></p>
+		    <hr>
+    		<img src="../static/rayleigh_fading.PNG" alt = "test" width = 100% height = 100%>
             <form method=post enctype=multipart/form-data>
                 Frequency in MHz (F0): <br>
                 <input type="number" name="f0" min="1" max="10000">
                 <br> Number of paths (n): <br>
                 <input type="number" name="n" min="1" max="1000">
-                 <br>Vehicle Speed in mph (v): <br>
+                 <br>Movement Speed in mph (v): <br>
                 <input type="number" name="v" min="1" max="1000">
                  <br> Samples per wavelength (fs): <br>
                 <input type="number" name="fs" min="1" max="1000"> <br>

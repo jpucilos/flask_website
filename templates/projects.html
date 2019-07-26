@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <html lang = "en">
 	<head>
 	    <title>Joe's Personal Website!</title>
 		<link rel="stylesheet" type = "text/css" href="../static/style.css">
-
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 	</head>
 
    	<body>
@@ -24,8 +25,9 @@
 		<div id = "mainBlock">
 		    <h1>Projects</h1>
 		    <hr>
-		    <h2><a href = "{{url_for('dalton method')}}">CPE 462 - Image Correction for the Partially Color-Blind</a></h2>
-		    <h2><a href = "{{url_for('rayleigh fading')}}">CPE 441 - Rayleigh Signal Fading Simulation</a></h2>
+		    <h2><a href = "{{url_for('dalton method')}}"> > Image Correction for the Partially Color-Blind</a></h2>
+		    <h2><a href = "{{url_for('rayleigh fading')}}"> > Rayleigh Signal Fading Simulation</a></h2>
+		    <h2><a href = "{{url_for('AES encryption')}}"> > AES Encryption (WIP) </a></h2>
 		</div>
 
    </body>
