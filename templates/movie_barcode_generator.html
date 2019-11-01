@@ -23,11 +23,12 @@
         </div>
 
 		<div id = "mainBlock">
-		    <h1>Projects</h1>
+		    <h1>Movie Barcode Generator</h1>
 		    <hr>
-		    <h2><a href = "{{url_for('dalton method')}}"> > Image Correction for the Partially Color-Blind</a></h2>
-		    <h2><a href = "{{url_for('rayleigh fading')}}"> > Rayleigh Signal Fading Simulation</a></h2>
-		    <h2><a href = "{{url_for('movie barcode')}}"> > Movie Barcode Generator </a></h2>
+		    <p>This python script takes every frame from a movie file and condenses them all down to a single pixel’s worth of color. Laid out in a single resultant image, the results take on a abstract form that speaks of the tone and mood of the movie it depicts.</p>
+		    <img src= "../static/The_Polar_Express_Barcode.jpg" width = 50% height = auto><p>For example, here's The Polar Express (2004) compressed into one barcode.</p>
+		    <p>This script employs k-means clustering on each frame sampled to find the dominant color in each image, thus creating a simplier, more abstract appearing barcode than with other generators seen on the internet.</p>
+            <a href = "https://github.com/jpucilos/movie_barcode_generator"><p>Click here to see the code for this project</p></a>
 		</div>
 
    </body>
