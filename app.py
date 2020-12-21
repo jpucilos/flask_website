@@ -92,10 +92,6 @@ def projects():
 def contact():
 	return render_template('books.html')
 
-@app.route('/WiiGA', endpoint='WiiGA')
-def WiiGA():
-	return render_template('WiiGA_Tour.html')
-
 @app.route('/photos', endpoint='photos')
 def photos():
     return render_template('photos.html', photo_urls = photo_urls)
